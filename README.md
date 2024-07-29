@@ -19,28 +19,27 @@ The architecture of the project allows for extending support to other curves as 
 
 ### File Structure
 This is the file system structure of the BasicSmartContract library:
-
+```
 Project/
 │
 ├── Contracts/
-│         └── SmartContract.cs
+│     └── SmartContract.cs
 │
 ├── Dictionaries/
-│         └── DictionaryECDsa.cs
+│     └── DictionaryECDsa.cs
 │
 ├── Enums/
-│         └── EllipticCurves.cs
+│     └── EllipticCurves.cs
 │
 ├── Security/
-│         └── ECDsaClass.cs
+│     └── ECDsaClass.cs
 │
 └── Utilities/
-          ├── ECDsaValidator.cs
-          └── ShaUtilities.cs
-```markdown
+      ├── ECDsaValidator.cs
+      └── ShaUtilities.cs
+```
 >[!TIP]
 >To add more elliptic curves edit `EllipticCurves.cs` and `DictionaryECDsa.cs`
-```
 
 
 ## Basic Configuration/Properties
@@ -105,14 +104,17 @@ else
 ```
 
 The line `_privateKeyHash = ShaUtilities.GetPrivateKeyHash(privateKey1, privateKey2);` contains a hash of the concatenated private keys that will be compared when we validate the contract. While it is not a secure measure, it is a starting point to implement a more robust method.
-```markdown
+
 > [!CAUTION]
 > Remember, this code is for educational purposes only.
-```
+
+
+
 Once the curves are verified, you can formalize the contract:
 ```csharp
 _contract = new SmartContract(message, publicKey1, publicKey2, curveName);
 ```
+
 
 When you want to validate the contract, follow these steps:
 ```csharp
@@ -134,6 +136,7 @@ Trace.WriteLine($"{_contract.InfoMessage}");
 ```
 
 ### Utilities
+
 You can use the `ListOfEllipticCurves` list from the `ECDsaClass.cs` class to populate lists or combo boxes with the predefined curves:
 ```csharp
 private static void PopulateCurveComboBox(ComboBox comboBox)
@@ -144,6 +147,7 @@ private static void PopulateCurveComboBox(ComboBox comboBox)
     comboBox.SelectedIndex = 0;
 }
 ```
+
 To get the SHA256, you can take a look in `ShaUtilities.cs` class:
 ```csharp
 public static string GetPrivateKeyHash(string privateKey1, string privateKey2)
