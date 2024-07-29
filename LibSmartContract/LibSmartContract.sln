@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibSmartContract", "LibSmartContract\LibSmartContract.csproj", "{7012E705-9132-4474-B636-7A8BD14D676C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7012E705-9132-4474-B636-7A8BD14D676C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7012E705-9132-4474-B636-7A8BD14D676C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7012E705-9132-4474-B636-7A8BD14D676C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7012E705-9132-4474-B636-7A8BD14D676C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7C7B0C8-59CE-46CC-9B32-FBC3833D28A5}
+	EndGlobalSection
+EndGlobal
